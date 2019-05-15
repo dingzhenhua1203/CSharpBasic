@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car.cs" />
     <Compile Include="Func\BasicKnowledge\Demo.cs" />
     <Compile Include="Func\BasicKnowledge\Dog.cs" />
     <Compile Include="Func\BasicKnowledge\Employee.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Func\RandomDemo.cs" />
     <Compile Include="Func\StringTest.cs" />
     <Compile Include="Func\TryCatchFinallyDemo.cs" />
+    <Compile Include="ICar.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
