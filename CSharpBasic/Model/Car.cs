@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpBasic
+namespace CSharpBasic.Model
 {
     //继承的时候 类必须写在接口前面
     //类只能继承一个类，可以是抽象类 也可以是实类，可以是继承了实类的抽象类，接口可以多个

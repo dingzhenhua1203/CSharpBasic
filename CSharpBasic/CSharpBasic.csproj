@@ -49,10 +49,11 @@
     <Compile Include="Basic\DelegateDemo.cs" />
     <Compile Include="Basic\EnumLib\EnumDemo.cs" />
     <Compile Include="Basic\EnumLib\EnumHelper.cs" />
+    <Compile Include="Basic\ExpressionDemo.cs" />
     <Compile Include="Basic\ListLib\ListDemo.cs" />
     <Compile Include="Basic\ListLib\Person.cs" />
     <Compile Include="Basic\ListLib\User.cs" />
-    <Compile Include="Car.cs" />
+    <Compile Include="Model\Car.cs" />
     <Compile Include="Basic\BasicKnowledge\Demo.cs" />
     <Compile Include="Basic\BasicKnowledge\Dog.cs" />
     <Compile Include="Basic\BasicKnowledge\Employee.cs" />
@@ -68,7 +69,7 @@
     <Compile Include="Basic\RandomDemo.cs" />
     <Compile Include="Basic\StringTest.cs" />
     <Compile Include="Basic\TryCatchFinallyDemo.cs" />
-    <Compile Include="ICar.cs" />
+    <Compile Include="Model\ICar.cs" />
     <Compile Include="Model\Employee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
