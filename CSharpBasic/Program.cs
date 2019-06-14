@@ -1,5 +1,5 @@
-﻿using CSharpBasic.Func;
-using CSharpBasic.Func.ForeachDemo;
+﻿using CSharpBasic.Basic;
+using CSharpBasic.Basic.ForeachLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
