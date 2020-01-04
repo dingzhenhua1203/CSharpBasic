@@ -19,8 +19,8 @@ namespace CSharpBasic.Basic
                 TestStaticService.GetConfigId3()=111
                 TestStaticService.GetConfigId4=111
                 TestStaticService.GetConfigId5=111
-                TestStaticService.GetInstance(true)=true
-                TestStaticService.GetInstance(false)=false
+                TestStaticService.GetInstance(true)=true:111
+                TestStaticService.GetInstance(false)=false:111
                 ------------------------static class-----------------
                 TestStaticService2.GetConfigId1=111
                 TestStaticService2.GetConfigId2()=111
@@ -29,15 +29,15 @@ namespace CSharpBasic.Basic
                 TestStaticService2.GetConfigId5=111
                 TestStaticService2.GetInstance(true)=true:111
                 TestStaticService2.GetInstance(false)=false:111
-                [13:32:00 INF] [tcbase.configcenter.client](6.5.3) jiesan.netcore.surprisegamepollapi配置项已改变，正在重新加载
+                [13:52:53 INF] [tcbase.configcenter.client](6.5.3) jiesan.netcore.surprisegamepollapi配置项已改变，正在重新加载
                  ------------------------普通 class-----------------
                 TestStaticService.GetConfigId1=111
                 TestStaticService.GetConfigId2()=222
                 TestStaticService.GetConfigId3()=222
                 TestStaticService.GetConfigId4=222
                 TestStaticService.GetConfigId5=111
-                TestStaticService.GetInstance(true)=true
-                TestStaticService.GetInstance(false)=false
+                TestStaticService.GetInstance(true)=true:222
+                TestStaticService.GetInstance(false)=false:222
                 ------------------------static class-----------------
                 TestStaticService2.GetConfigId1=111
                 TestStaticService2.GetConfigId2()=222
@@ -110,7 +110,7 @@ namespace CSharpBasic.Basic
         /// <returns></returns>
         public static string GetInstance(bool isValue)
         {
-            return isValue ? "true" : "false";
+            return isValue ? $"true:{ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "")}" : $"false:{ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "")}";
         }
     }
 
