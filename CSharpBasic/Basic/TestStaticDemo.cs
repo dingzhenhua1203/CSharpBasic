@@ -14,77 +14,80 @@ namespace CSharpBasic.Basic
             /**
              * 外部配置一开始时111 后来变成222
              * ------------------------普通 class-----------------
-                TestStaticService.GetConfigId1=111
-                TestStaticService.GetConfigId2()=111
-                TestStaticService.GetConfigId3()=111
-                TestStaticService.GetConfigId4=111
-                TestStaticService.GetConfigId5=111
-                TestStaticService.GetInstance(true)=true:111
-                TestStaticService.GetInstance(false)=false:111
-                ------------------------static class-----------------
-                TestStaticService2.GetConfigId1=111
-                TestStaticService2.GetConfigId2()=111
-                TestStaticService2.GetConfigId3()=111
-                TestStaticService2.GetConfigId4=111
-                TestStaticService2.GetConfigId5=111
-                TestStaticService2.GetInstance(true)=true:111
-                TestStaticService2.GetInstance(false)=false:111
-                [13:52:53 INF] [tcbase.configcenter.client](6.5.3) jiesan.netcore.surprisegamepollapi配置项已改变，正在重新加载
-                 ------------------------普通 class-----------------
-                TestStaticService.GetConfigId1=111
-                TestStaticService.GetConfigId2()=222
-                TestStaticService.GetConfigId3()=222
-                TestStaticService.GetConfigId4=222
-                TestStaticService.GetConfigId5=111
-                TestStaticService.GetInstance(true)=true:222
-                TestStaticService.GetInstance(false)=false:222
-                ------------------------static class-----------------
-                TestStaticService2.GetConfigId1=111
-                TestStaticService2.GetConfigId2()=222
-                TestStaticService2.GetConfigId3()=222
-                TestStaticService2.GetConfigId4=222
-                TestStaticService2.GetConfigId5=111
-                TestStaticService2.GetInstance(true)=true:222
-                TestStaticService2.GetInstance(false)=false:222
+               TestCommonService.静态变量=111
+               TestCommonService.静态方法()=111
+               TestCommonService.静态方法语法糖=>()=111
+               TestCommonService.只读属性=111
+               TestCommonService.属性=111
+               TestCommonService.静态有参方法(true)=true:111
+               TestCommonService.静态有参方法(false)=false:111
+               ------------------------静态 class-----------------
+               TestStaticService.静态变量=111
+               TestStaticService.静态方法()=111
+               TestStaticService.静态方法语法糖=>()=111
+               TestStaticService.只读属性=111
+               TestStaticService.属性=111
+               TestStaticService.静态有参方法(true)=true:111
+               TestStaticService.静态有参方法(false)=false:111
+               [14:09:33 INF] [tcbase.configcenter.client](6.5.3) jiesan.netcore.surprisegamepollapi配置项已改变，正在重新加载
+                ------------------------普通 class-----------------
+               TestCommonService.静态变量=111
+               TestCommonService.静态方法()=222
+               TestCommonService.静态方法语法糖=>()=222
+               TestCommonService.只读属性=222
+               TestCommonService.属性=111
+               TestCommonService.静态有参方法(true)=true:222
+               TestCommonService.静态有参方法(false)=false:222
+               ------------------------静态 class-----------------
+               TestStaticService.静态变量=111
+               TestStaticService.静态方法()=222
+               TestStaticService.静态方法语法糖=>()=222
+               TestStaticService.只读属性=222
+               TestStaticService.属性=111
+               TestStaticService.静态有参方法(true)=true:222
+               TestStaticService.静态有参方法(false)=false:222
              * 
              **/
 
             Environment.SetEnvironmentVariable("DAOKEAPPUK", "jiesan.netcore.surprisegamepollapi");
+            //ConfigCenterClient.Init(ProjectsEnum.List);
 
             Console.WriteLine($"------------------------普通 class-----------------");
-            Console.WriteLine($"TestStaticService.GetConfigId1={TestStaticService.GetConfigId1}");
-            Console.WriteLine($"TestStaticService.GetConfigId2()={TestStaticService.GetConfigId2()}");
-            Console.WriteLine($"TestStaticService.GetConfigId3()={TestStaticService.GetConfigId3()}");
-            Console.WriteLine($"TestStaticService.GetConfigId4={TestStaticService.GetConfigId4}");
-            Console.WriteLine($"TestStaticService.GetConfigId5={TestStaticService.GetConfigId5}");
-            Console.WriteLine($"TestStaticService.GetInstance(true)={TestStaticService.GetInstance(true)}");
-            Console.WriteLine($"TestStaticService.GetInstance(false)={TestStaticService.GetInstance(false)}");
-            Console.WriteLine($"------------------------static class-----------------");
-            Console.WriteLine($"TestStaticService2.GetConfigId1={TestStaticService2.GetConfigId1}");
-            Console.WriteLine($"TestStaticService2.GetConfigId2()={TestStaticService2.GetConfigId2()}");
-            Console.WriteLine($"TestStaticService2.GetConfigId3()={TestStaticService2.GetConfigId3()}");
-            Console.WriteLine($"TestStaticService2.GetConfigId4={TestStaticService2.GetConfigId4}");
-            Console.WriteLine($"TestStaticService2.GetConfigId5={TestStaticService2.GetConfigId5}");
-            Console.WriteLine($"TestStaticService2.GetInstance(true)={TestStaticService2.GetInstance(true)}");
-            Console.WriteLine($"TestStaticService2.GetInstance(false)={TestStaticService2.GetInstance(false)}");
+            Console.WriteLine($"TestCommonService.静态变量={TestCommonService.静态变量}");
+            Console.WriteLine($"TestCommonService.静态方法()={TestCommonService.静态方法()}");
+            Console.WriteLine($"TestCommonService.静态方法语法糖=>()={TestCommonService.静态方法语法糖()}");
+            Console.WriteLine($"TestCommonService.只读属性={TestCommonService.只读属性}");
+            Console.WriteLine($"TestCommonService.属性={TestCommonService.属性}");
+            Console.WriteLine($"TestCommonService.静态有参方法(true)={TestCommonService.静态有参方法(true)}");
+            Console.WriteLine($"TestCommonService.静态有参方法(false)={TestCommonService.静态有参方法(false)}");
+            Console.WriteLine($"------------------------静态 class-----------------");
+            Console.WriteLine($"TestStaticService.静态变量={TestStaticService.静态变量}");
+            Console.WriteLine($"TestStaticService.静态方法()={TestStaticService.静态方法()}");
+            Console.WriteLine($"TestStaticService.静态方法语法糖=>()={TestStaticService.静态方法语法糖()}");
+            Console.WriteLine($"TestStaticService.只读属性={TestStaticService.只读属性}");
+            Console.WriteLine($"TestStaticService.属性={TestStaticService.属性}");
+            Console.WriteLine($"TestStaticService.静态有参方法(true)={TestStaticService.静态有参方法(true)}");
+            Console.WriteLine($"TestStaticService.静态有参方法(false)={TestStaticService.静态有参方法(false)}");
 
             Console.ReadKey();
         }
     }
+
+
     /// <summary>
     /// 
     /// </summary>
-    public class TestStaticService
+    public class TestCommonService
     {
         /// <summary>
         /// 静态变量
         /// </summary>
-        public static string GetConfigId1 = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+        public static string 静态变量 = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
         /// <summary>
         /// 静态方法
         /// </summary>
         /// <returns></returns>
-        public static string GetConfigId2()
+        public static string 静态方法()
         {
             return ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
         }
@@ -92,23 +95,23 @@ namespace CSharpBasic.Basic
         /// 静态方法语法糖
         /// </summary>
         /// <returns></returns>
-        public static string GetConfigId3() => ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+        public static string 静态方法语法糖() => ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
 
         /// <summary>
         /// 只读属性
         /// </summary>
-        public static string GetConfigId4 => ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+        public static string 只读属性 => ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
         /// <summary>
         /// 属性
         /// </summary>
-        public static string GetConfigId5 { get; set; } = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+        public static string 属性 { get; set; } = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
 
         /// <summary>
-        /// 静态方法
+        /// 静态有参方法
         /// </summary>
         /// <param name="isValue"></param>
         /// <returns></returns>
-        public static string GetInstance(bool isValue)
+        public static string 静态有参方法(bool isValue)
         {
             return isValue ? $"true:{ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "")}" : $"false:{ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "")}";
         }
@@ -117,17 +120,17 @@ namespace CSharpBasic.Basic
     /// <summary>
     /// 
     /// </summary>
-    public static class TestStaticService2
+    public static class TestStaticService
     {
         /// <summary>
         /// 静态变量
         /// </summary>
-        public static string GetConfigId1 = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+        public static string 静态变量 = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
         /// <summary>
         /// 静态方法
         /// </summary>
         /// <returns></returns>
-        public static string GetConfigId2()
+        public static string 静态方法()
         {
             return ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
         }
@@ -135,23 +138,23 @@ namespace CSharpBasic.Basic
         /// 静态方法语法糖
         /// </summary>
         /// <returns></returns>
-        public static string GetConfigId3() => ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+        public static string 静态方法语法糖() => ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
 
         /// <summary>
         /// 只读属性
         /// </summary>
-        public static string GetConfigId4 => ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+        public static string 只读属性 => ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
         /// <summary>
         /// 属性
         /// </summary>
-        public static string GetConfigId5 { get; set; } = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+        public static string 属性 { get; set; } = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
 
         /// <summary>
-        /// 静态方法
+        /// 静态有参方法
         /// </summary>
         /// <param name="isValue"></param>
         /// <returns></returns>
-        public static string GetInstance(bool isValue)
+        public static string 静态有参方法(bool isValue)
         {
             return isValue ? $"true:{ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "")}" : $"false:{ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "")}";
         }
