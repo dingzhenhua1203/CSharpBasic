@@ -46,6 +46,7 @@
     <Compile Include="Basic\AttributeLib\DzhTestAttributeDemo.cs" />
     <Compile Include="Basic\AttributeLib\Student.cs" />
     <Compile Include="BaseDemo.cs" />
+    <Compile Include="Basic\ConfigHelper.cs" />
     <Compile Include="Basic\DelegateDemo.cs" />
     <Compile Include="Basic\EnumLib\EnumDemo.cs" />
     <Compile Include="Basic\EnumLib\EnumHelper.cs" />
@@ -53,6 +54,8 @@
     <Compile Include="Basic\ListLib\ListDemo.cs" />
     <Compile Include="Basic\ListLib\Person.cs" />
     <Compile Include="Basic\ListLib\User.cs" />
+    <Compile Include="Basic\ProjectsEnum.cs" />
+    <Compile Include="Basic\TestStaticDemo.cs" />
     <Compile Include="Model\Car.cs" />
     <Compile Include="Basic\BasicKnowledge\Demo.cs" />
     <Compile Include="Basic\BasicKnowledge\Dog.cs" />
