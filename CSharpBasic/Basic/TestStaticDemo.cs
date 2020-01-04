@@ -57,7 +57,8 @@ namespace CSharpBasic.Basic
             Console.WriteLine($"TestCommonService.静态方法()={TestCommonService.静态方法()}");
             Console.WriteLine($"TestCommonService.静态方法语法糖=>()={TestCommonService.静态方法语法糖()}");
             Console.WriteLine($"TestCommonService.只读属性={TestCommonService.只读属性}");
-            Console.WriteLine($"TestCommonService.属性={TestCommonService.属性}");
+            Console.WriteLine($"TestCommonService.属性={TestCommonService.属性语法糖}");
+            Console.WriteLine($"TestCommonService.标准属性={TestCommonService.标准属性}");
             Console.WriteLine($"TestCommonService.静态有参方法(true)={TestCommonService.静态有参方法(true)}");
             Console.WriteLine($"TestCommonService.静态有参方法(false)={TestCommonService.静态有参方法(false)}");
             Console.WriteLine($"------------------------静态 class-----------------");
@@ -65,7 +66,8 @@ namespace CSharpBasic.Basic
             Console.WriteLine($"TestStaticService.静态方法()={TestStaticService.静态方法()}");
             Console.WriteLine($"TestStaticService.静态方法语法糖=>()={TestStaticService.静态方法语法糖()}");
             Console.WriteLine($"TestStaticService.只读属性={TestStaticService.只读属性}");
-            Console.WriteLine($"TestStaticService.属性={TestStaticService.属性}");
+            Console.WriteLine($"TestStaticService.属性语法糖={TestStaticService.属性语法糖}");
+            Console.WriteLine($"TestStaticService.标准属性={TestStaticService.标准属性}");
             Console.WriteLine($"TestStaticService.静态有参方法(true)={TestStaticService.静态有参方法(true)}");
             Console.WriteLine($"TestStaticService.静态有参方法(false)={TestStaticService.静态有参方法(false)}");
 
@@ -75,7 +77,7 @@ namespace CSharpBasic.Basic
 
 
     /// <summary>
-    /// 
+    /// 非静态类
     /// </summary>
     public class TestCommonService
     {
@@ -102,9 +104,24 @@ namespace CSharpBasic.Basic
         /// </summary>
         public static string 只读属性 => ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
         /// <summary>
+        /// 属性语法糖
+        /// </summary>
+        public static string 属性语法糖 { get; set; } = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+
+        /// <summary>
         /// 属性
         /// </summary>
-        public static string 属性 { get; set; } = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+        public static string 标准属性
+        {
+            get
+            {
+                return ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+            }
+            set
+            {
+            }
+        }
+
 
         /// <summary>
         /// 静态有参方法
@@ -118,7 +135,7 @@ namespace CSharpBasic.Basic
     }
 
     /// <summary>
-    /// 
+    /// 静态类
     /// </summary>
     public static class TestStaticService
     {
@@ -145,9 +162,23 @@ namespace CSharpBasic.Basic
         /// </summary>
         public static string 只读属性 => ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
         /// <summary>
-        /// 属性
+        /// 属性语法糖
         /// </summary>
-        public static string 属性 { get; set; } = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+        public static string 属性语法糖 { get; set; } = ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+
+        /// <summary>
+        /// 标准属性
+        /// </summary>
+        public static string 标准属性
+        {
+            get
+            {
+                return ConfigHelper.TryGetOtherProject(ProjectsEnum.SurpriseGamePollApi, "ConfigId", "");
+            }
+            set
+            {
+            }
+        }
 
         /// <summary>
         /// 静态有参方法
