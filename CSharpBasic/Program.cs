@@ -46,6 +46,12 @@ namespace CSharpBasic
             ForeachDemo.TestDemo();
 
 
+            Console.WriteLine("...........................【测试继承中this】...........................");
+            ThisKeywordDemo.Test();
+
+
+            Console.ReadKey();
+
         }
 
 
