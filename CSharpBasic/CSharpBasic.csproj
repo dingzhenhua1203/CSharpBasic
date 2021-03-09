@@ -57,6 +57,7 @@
     <Compile Include="Basic\ProjectsEnum.cs" />
     <Compile Include="Basic\TestStaticDemo.cs" />
     <Compile Include="Basic\ThisKeywordDemo.cs" />
+    <Compile Include="Worker.cs" />
     <Compile Include="Model\Car.cs" />
     <Compile Include="Basic\BasicKnowledge\Demo.cs" />
     <Compile Include="Basic\BasicKnowledge\Dog.cs" />

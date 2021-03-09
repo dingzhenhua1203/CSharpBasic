@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallName", "CallName\CallNa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpBasicTests", "CSharpBasicTests\CSharpBasicTests.csproj", "{8F96A8D6-07BD-4A97-8D0E-08C422BA2420}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketDemo", "SocketDemo\SocketDemo.csproj", "{BA0D8749-2A2B-456C-9F11-C26C95645A1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8F96A8D6-07BD-4A97-8D0E-08C422BA2420}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F96A8D6-07BD-4A97-8D0E-08C422BA2420}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F96A8D6-07BD-4A97-8D0E-08C422BA2420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA0D8749-2A2B-456C-9F11-C26C95645A1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA0D8749-2A2B-456C-9F11-C26C95645A1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA0D8749-2A2B-456C-9F11-C26C95645A1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA0D8749-2A2B-456C-9F11-C26C95645A1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

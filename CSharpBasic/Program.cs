@@ -49,6 +49,9 @@ namespace CSharpBasic
             Console.WriteLine("...........................【测试继承中this】...........................");
             ThisKeywordDemo.Test();
 
+            Console.WriteLine("...........................【测试继承Worker的父子类间构造方法】...........................");
+            new Saler();
+            new Leader(1);
 
             Console.ReadKey();
 
@@ -57,5 +60,5 @@ namespace CSharpBasic
 
 
 
-    }  
+    }
 }
